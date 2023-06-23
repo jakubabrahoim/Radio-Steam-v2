@@ -17,6 +17,8 @@ module.exports = {
         },
         colors: {
             transparent: 'transparent',
+            white: '#fff',
+            black: '#000',
             'dark-blue-100': '#00355C',
             'dark-blue-200': '#002642',
             gold: '#E59500',

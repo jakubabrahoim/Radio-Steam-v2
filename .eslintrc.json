@@ -9,6 +9,7 @@
     "quotes": ["warn", "single"],
     "semi": ["warn", "always"],
     "no-unused-vars": "warn",
-    "no-console": "warn"
+    "no-console": "warn",
+    "next/no-img-element": "off",
   }
 }

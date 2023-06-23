@@ -1,4 +1,6 @@
+import MediaIllustration from '@/components/media-illustration';
 import { Dela_Gothic_One } from 'next/font/google';
+import Image from 'next/image';
 
 const gothic = Dela_Gothic_One({ weight: '400', subsets: ['latin'] });
 
@@ -21,8 +23,23 @@ export default function Home() {
                         </button>
                     </div>
                     <div>
-                        <img src='/images/landing-grid.png' />
+                        <img
+                            src='/images/landing-grid.png'
+                            alt='landing grid'
+                            loading='lazy'
+                        />
                     </div>
+                </div>
+            </section>
+
+            <section className='flex h-screen w-screen items-center justify-center bg-white'>
+                <div className='mx-auto flex w-full max-w-6xl  items-center justify-between'>
+                    <h1
+                        className={`max-w-2xl text-start text-6xl font-bold ${gothic.className}`}
+                    >
+                        Explore diverse stations from around the world.
+                    </h1>
+                    <MediaIllustration />
                 </div>
             </section>
         </main>
