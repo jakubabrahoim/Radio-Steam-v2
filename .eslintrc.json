@@ -1,3 +1,14 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": ["next/core-web-vitals", "eslint:recommended"],
+  "rules": {
+    "indent": ["warn", 4],
+    "comma-dangle": "off",
+    "space-before-function-paren": "off",
+    "import/no-named-as-default": "off",
+    "curly": "off",
+    "quotes": ["warn", "single"],
+    "semi": ["warn", "always"],
+    "no-unused-vars": "warn",
+    "no-console": "warn"
+  }
 }
