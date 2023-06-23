@@ -27,7 +27,10 @@ export default function Home() {
                         >
                             Tune in to the globe
                         </h1>
-                        <button className='rounded-full bg-cream px-4 py-2 font-semibold text-fuchsia'>
+                        <button
+                            onClick={scrollToSection2}
+                            className='rounded-full bg-cream px-4 py-2 font-semibold text-fuchsia'
+                        >
                             Discover now
                         </button>
                     </div>
