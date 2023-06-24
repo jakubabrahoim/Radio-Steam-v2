@@ -26,8 +26,8 @@ export default function Home() {
 
     return (
         <main className='flex min-h-screen flex-col items-center'>
-            <section className='relative flex h-screen w-screen items-center justify-center bg-cream-200'>
-                <div className='mx-auto flex w-full max-w-6xl  items-center justify-between'>
+            <section className='relative flex h-screen w-screen items-center justify-center bg-cream-200 p-6'>
+                <div className='mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-8  md:flex-row md:gap-0'>
                     <div className='flex flex-col items-start justify-center gap-10'>
                         <span className='rounded-full border border-fuchsia-900 bg-transparent px-4 py-2 font-semibold text-fuchsia-900'>
                             Stream World&apos;s Music
@@ -55,7 +55,7 @@ export default function Home() {
 
                 <button
                     onClick={scrollToSection2}
-                    className='absolute inset-x-auto bottom-2'
+                    className='invisible absolute inset-x-auto bottom-2 md:visible'
                 >
                     <ChevronDown className='h-10 w-10 animate-bounce text-fuchsia-900' />
                 </button>
@@ -63,11 +63,11 @@ export default function Home() {
 
             <section
                 ref={section2Ref}
-                className='relative flex h-screen w-screen items-center justify-center bg-cream-100'
+                className='relative flex min-h-screen w-screen items-center justify-center bg-cream-100 p-6'
             >
-                <div className='mx-auto flex w-full max-w-6xl  items-center justify-between'>
+                <div className='mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-8  md:flex-row md:gap-0'>
                     <h1
-                        className={`max-w-2xl text-start text-6xl font-bold tracking-wide ${gothic.className}`}
+                        className={`max-w-2xl text-start text-4xl font-bold tracking-wide md:text-6xl ${gothic.className}`}
                     >
                         Explore diverse stations from around the world.
                     </h1>
@@ -76,7 +76,7 @@ export default function Home() {
 
                 <button
                     onClick={scrollToSection3}
-                    className='absolute inset-x-auto bottom-2'
+                    className='invisible absolute inset-x-auto bottom-2 md:visible'
                 >
                     <ChevronDown className='h-10 w-10 animate-bounce text-fuchsia-900' />
                 </button>
@@ -84,10 +84,10 @@ export default function Home() {
 
             <section
                 ref={section3Ref}
-                className='relative flex h-screen w-screen items-center justify-center bg-cream-200'
+                className='relative flex min-h-screen w-screen items-center justify-center bg-cream-200 p-6'
             >
                 <div className='mx-auto grid w-full max-w-6xl  grid-cols-3 items-center  justify-between gap-6'>
-                    <div className='col-span-2 rounded-2xl bg-cream-50 p-8'>
+                    <div className='col-span-3 rounded-2xl bg-cream-50 p-8 md:col-span-2'>
                         <h2
                             className={`text-3xl font-bold text-fuchsia-900 ${gothic.className}`}
                         >
@@ -100,7 +100,7 @@ export default function Home() {
                             alt='likes'
                         />
                     </div>
-                    <div className='col-span-1 rounded-2xl bg-cream-50 p-8'>
+                    <div className='col-span-3 rounded-2xl bg-cream-50 p-8 md:col-span-1'>
                         <h2
                             className={`text-3xl font-bold text-fuchsia-900 ${gothic.className}`}
                         >
@@ -113,7 +113,7 @@ export default function Home() {
                             alt='search'
                         />
                     </div>
-                    <div className='col-span 1 rounded-2xl bg-cream-50 p-8'>
+                    <div className='col-span-3 rounded-2xl bg-cream-50 p-8 md:col-span-1'>
                         <h2
                             className={`text-3xl font-bold text-fuchsia-900 ${gothic.className}`}
                         >
@@ -126,7 +126,7 @@ export default function Home() {
                             alt='categories'
                         />
                     </div>
-                    <div className='col-span-2 rounded-2xl bg-cream-50 p-8'>
+                    <div className='col-span-3 rounded-2xl bg-cream-50 p-8 md:col-span-2'>
                         <h2
                             className={`text-3xl font-bold text-fuchsia-900 ${gothic.className}`}
                         >
@@ -143,7 +143,7 @@ export default function Home() {
 
                 <button
                     onClick={scrollToSection4}
-                    className='absolute inset-x-auto bottom-2'
+                    className='invisible absolute inset-x-auto bottom-2 md:visible'
                 >
                     <ChevronDown className='h-10 w-10 animate-bounce text-fuchsia-900' />
                 </button>
@@ -151,10 +151,10 @@ export default function Home() {
 
             <section
                 ref={section4Ref}
-                className='relative flex w-screen items-center justify-center bg-cream-100 py-20'
+                className='relative flex min-h-screen w-screen items-center justify-center bg-cream-100 px-6 py-20'
             >
                 <div className='mx-auto flex w-full max-w-6xl flex-col gap-10'>
-                    <div className='flex w-full items-center justify-between'>
+                    <div className='flex w-full flex-col items-center justify-between gap-4 md:flex-row md:gap-0'>
                         <div className='flex flex-col gap-4'>
                             <h1
                                 className={`max-w-md text-3xl tracking-wide ${gothic.className}`}
@@ -176,7 +176,7 @@ export default function Home() {
                         />
                     </div>
 
-                    <div className='flex w-full items-center justify-between'>
+                    <div className='flex w-full flex-col items-center justify-between gap-4 md:flex-row md:gap-0'>
                         <img
                             className='h-[500px] w-[500px]  rounded-2xl object-cover grayscale'
                             src='/images/landing-section3.2.png'
