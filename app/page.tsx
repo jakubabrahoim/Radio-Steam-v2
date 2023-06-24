@@ -24,6 +24,10 @@ export default function Home() {
         section4Ref.current?.scrollIntoView({ behavior: 'smooth' });
     };
 
+    const getCurrentYear = () => {
+        return new Date().getFullYear();
+    };
+
     return (
         <main className='flex min-h-screen flex-col items-center'>
             <section className='relative flex h-screen w-screen items-center justify-center bg-cream-200 p-6'>
@@ -198,6 +202,10 @@ export default function Home() {
                     </div>
                 </div>
             </section>
+
+            <footer className='flex h-24 w-full items-center justify-center bg-fuchsia-900 p-6 text-lg font-semibold tracking-widest text-white'>
+                &copy; Radio Stream {getCurrentYear()}
+            </footer>
         </main>
     );
 }
