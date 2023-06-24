@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'top-bar top-bar'
+        'left-sidebar main-content'
+        'left-sidebar bottom-bar';
+    grid-template-rows: 40px 1fr 70px;
+    grid-template-columns: 240px 1fr;
+    height: 100vh;
+    width: 100vw;
+}
+
+.left-sidebar {
+    grid-area: left-sidebar;
+}
+
+.main-content {
+    grid-area: main-content;
+}
+
+.top-bar {
+    grid-area: top-bar;
+}
+
+.bottom-bar {
+    grid-area: bottom-bar;
+}
