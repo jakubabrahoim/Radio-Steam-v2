@@ -10,6 +10,7 @@ const gothic = Dela_Gothic_One({ weight: '400', subsets: ['latin'] });
 export default function Home() {
     const section2Ref = useRef<HTMLDivElement>(null);
     const section3Ref = useRef<HTMLDivElement>(null);
+    const section4Ref = useRef<HTMLDivElement>(null);
 
     const scrollToSection2 = () => {
         section2Ref.current?.scrollIntoView({ behavior: 'smooth' });
@@ -17,6 +18,10 @@ export default function Home() {
 
     const scrollToSection3 = () => {
         section3Ref.current?.scrollIntoView({ behavior: 'smooth' });
+    };
+
+    const scrollToSection4 = () => {
+        section4Ref.current?.scrollIntoView({ behavior: 'smooth' });
     };
 
     return (
@@ -28,7 +33,7 @@ export default function Home() {
                             Stream World&apos;s Music
                         </span>
                         <h1
-                            className={`max-w-sm text-start text-6xl font-bold text-fuchsia-900 ${gothic.className}`}
+                            className={`max-w-sm text-start text-6xl font-bold tracking-wide text-fuchsia-900 ${gothic.className}`}
                         >
                             Tune in to the globe
                         </h1>
@@ -62,7 +67,7 @@ export default function Home() {
             >
                 <div className='mx-auto flex w-full max-w-6xl  items-center justify-between'>
                     <h1
-                        className={`max-w-2xl text-start text-6xl font-bold ${gothic.className}`}
+                        className={`max-w-2xl text-start text-6xl font-bold tracking-wide ${gothic.className}`}
                     >
                         Explore diverse stations from around the world.
                     </h1>
@@ -79,12 +84,12 @@ export default function Home() {
 
             <section
                 ref={section3Ref}
-                className='flex h-screen w-screen items-center justify-center bg-cream-200'
+                className='relative flex h-screen w-screen items-center justify-center bg-cream-200'
             >
                 <div className='mx-auto grid w-full max-w-6xl  grid-cols-3 items-center  justify-between gap-6'>
                     <div className='col-span-2 rounded-2xl bg-cream-50 p-8'>
                         <h2
-                            className={`text-2xl font-bold text-fuchsia-900 ${gothic.className}`}
+                            className={`text-3xl font-bold text-fuchsia-900 ${gothic.className}`}
                         >
                             Likes
                         </h2>
@@ -97,7 +102,7 @@ export default function Home() {
                     </div>
                     <div className='col-span-1 rounded-2xl bg-cream-50 p-8'>
                         <h2
-                            className={`text-2xl font-bold text-fuchsia-900 ${gothic.className}`}
+                            className={`text-3xl font-bold text-fuchsia-900 ${gothic.className}`}
                         >
                             Search
                         </h2>
@@ -110,7 +115,7 @@ export default function Home() {
                     </div>
                     <div className='col-span 1 rounded-2xl bg-cream-50 p-8'>
                         <h2
-                            className={`text-2xl font-bold text-fuchsia-900 ${gothic.className}`}
+                            className={`text-3xl font-bold text-fuchsia-900 ${gothic.className}`}
                         >
                             Categories
                         </h2>
@@ -123,7 +128,7 @@ export default function Home() {
                     </div>
                     <div className='col-span-2 rounded-2xl bg-cream-50 p-8'>
                         <h2
-                            className={`text-2xl font-bold text-fuchsia-900 ${gothic.className}`}
+                            className={`text-3xl font-bold text-fuchsia-900 ${gothic.className}`}
                         >
                             Countries
                         </h2>
@@ -133,6 +138,63 @@ export default function Home() {
                             src='/images/landing-countries.png'
                             alt='countries'
                         />
+                    </div>
+                </div>
+
+                <button
+                    onClick={scrollToSection4}
+                    className='absolute inset-x-auto bottom-2'
+                >
+                    <ChevronDown className='h-10 w-10 animate-bounce text-fuchsia-900' />
+                </button>
+            </section>
+
+            <section
+                ref={section4Ref}
+                className='relative flex w-screen items-center justify-center bg-cream-100 py-20'
+            >
+                <div className='mx-auto flex w-full max-w-6xl flex-col gap-10'>
+                    <div className='flex w-full items-center justify-between'>
+                        <div className='flex flex-col gap-4'>
+                            <h1
+                                className={`max-w-md text-3xl tracking-wide ${gothic.className}`}
+                            >
+                                All your favorites, just a click away
+                            </h1>
+                            <p className='max-w-md'>
+                                Stream World&apos;s Music offers quick and
+                                convenient access to your favorite radio
+                                stations. Connect with a global community of
+                                music lovers and discover new, exciting stations
+                                from around the world.
+                            </p>
+                        </div>
+                        <img
+                            className='h-[500px] w-[500px]  rounded-2xl object-cover grayscale'
+                            src='/images/landing-section3.1.png'
+                            alt='section3'
+                        />
+                    </div>
+
+                    <div className='flex w-full items-center justify-between'>
+                        <img
+                            className='h-[500px] w-[500px]  rounded-2xl object-cover grayscale'
+                            src='/images/landing-section3.2.png'
+                            alt='section3'
+                        />
+                        <div className='flex flex-col gap-4'>
+                            <h1
+                                className={`max-w-md text-3xl tracking-wide ${gothic.className}`}
+                            >
+                                Personalized for your unique taste
+                            </h1>
+                            <p className='max-w-md'>
+                                We know you&apos;re unique, and we&apos;ve got
+                                you covered! Our website learns your preferences
+                                and customizes the selection just for you! Be
+                                prepared to expand your musical horizons.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>
