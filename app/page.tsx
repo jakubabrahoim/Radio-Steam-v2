@@ -1,6 +1,6 @@
 'use client';
 
-import MediaIllustration from '@/components/media-illustration';
+import MediaIllustration from '@/components/MediaIllustration';
 import { ChevronDown } from 'lucide-react';
 import { Dela_Gothic_One } from 'next/font/google';
 import { useRef } from 'react';
