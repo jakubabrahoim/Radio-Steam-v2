@@ -3,6 +3,7 @@
 import MediaIllustration from '@/components/MediaIllustration';
 import { ChevronDown } from 'lucide-react';
 import { Dela_Gothic_One } from 'next/font/google';
+import Link from 'next/link';
 import { useRef } from 'react';
 
 const gothic = Dela_Gothic_One({ weight: '400', subsets: ['latin'] });
@@ -31,6 +32,15 @@ export default function Home() {
     return (
         <main className='flex min-h-screen flex-col items-center'>
             <section className='relative flex h-screen w-screen items-center justify-center bg-cream-200 p-6'>
+                <div className='absolute top-4 mx-auto flex w-full max-w-6xl items-center justify-end'>
+                    <Link
+                        href='/app'
+                        className='rounded-lg bg-fuchsia-900 px-2 py-1 font-semibold text-white transition-colors hover:bg-fuchsia-800'
+                    >
+                        Open Radio Stream
+                    </Link>
+                </div>
+
                 <div className='mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-8  md:flex-row md:gap-0'>
                     <div className='flex flex-col items-start justify-center gap-10'>
                         <span className='rounded-full border border-fuchsia-900 bg-transparent px-4 py-2 font-semibold text-fuchsia-900'>
